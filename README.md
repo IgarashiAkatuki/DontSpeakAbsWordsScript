@@ -1,0 +1,2 @@
+# DontSpeakAbsWordsScript
+DontSpeakAbsWords油猴脚本
