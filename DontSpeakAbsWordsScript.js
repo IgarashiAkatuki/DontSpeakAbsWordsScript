@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         DontSpeakAbsWords
-// @namespace    https://github.com/IgarashiAkatuki/DontSpeakAbsWords
+// @namespace    https://github.com/IgarashiAkatuki/DontSpeakAbsWordsScript
 // @version      0.2.1
 // @description  This is a test version
 // @author       Midsummra
@@ -67,15 +67,18 @@
     }
 
     $(document).mousedown(function(e){
-        let _dom = $('#transPopover');
-        if(!_dom.is(e.target) && _dom.has(e.target).length === 0){
-            $('#trans').hide();
-            $('#transPrompt').hide();
-            $('.submitTrans').hide();
-            _dom.hide();
-            window.getSelection().removeAllRanges()
-            data.select = ''
+        if (e.which === 1){
+            let _dom = $('#transPopover');
+            if(!_dom.is(e.target) && _dom.has(e.target).length === 0){
+                $('#trans').hide();
+                $('#transPrompt').hide();
+                $('.submitTrans').hide();
+                _dom.hide();
+                window.getSelection().removeAllRanges()
+                data.select = ''
+            }
         }
+
     });
 
 
